@@ -22,4 +22,21 @@ class TestPluginPlugin extends \Plugin
         #
         // drop table test_plugin
     }
+
+    public function getName() {
+        return "Test Plugin";
+    }
+
+    public function getVersion() {
+        return "1.0.0";
+    }
+
+    public function getAuthors() {
+        return [
+            [
+                'name' => "Fadlur",
+                'url' => "http://blesta.com"
+            ]
+        ];
+    }
 }
