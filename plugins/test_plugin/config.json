@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Test Plugin",
+  "name": "TestPlugin.name",
   "description": "Test create plugin!",
   "authors": [
     {
