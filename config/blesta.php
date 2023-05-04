@@ -14,7 +14,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // PHP error_reporting. 0 to disable error reporting, -1 to to show all errors
 // Consult php's documentation for additional options
-Configure::errorReporting(0);
+Configure::errorReporting(-1);
 // Override minPHP's debugging setting. true to enable debugging, false to disable it
 Configure::set('System.debug', false);
 
