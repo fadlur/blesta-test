@@ -12,6 +12,7 @@ class PdoHandler implements SessionHandlerInterface
     protected $db;
     protected $options;
 
+    #[\ReturnTypeWillChange]
     public function __construct(PDO $db, array $options = [])
     {
         $this->options = array_merge(
