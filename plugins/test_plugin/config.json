@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "Test Plugin",
+  "description": "Test create plugin!",
+  "authors": [
+    {
+      "name": "Phillips Data, Inc.",
+      "url": "http://www.blesta.com"
+    }
+  ]
+}
