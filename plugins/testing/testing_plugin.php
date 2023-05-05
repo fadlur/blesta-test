@@ -12,9 +12,9 @@ class TestingPlugin extends Plugin
         return [
             [
                 'location' => 'nav_client',
-                'uri' => 'plugin/domains/client_main/index/',
-                'name' => 'DomainsPlugin.nav_client.domains',
-                'options' => ['parent' => 'services/index/active/']
+                'uri' => 'plugin/testing/client_main/index/',
+                'name' => 'Testing Plugin',
+//                'options' => ['parent' => 'services/index/active/']
             ],
             [
                 'action' => 'widget_client_home',
