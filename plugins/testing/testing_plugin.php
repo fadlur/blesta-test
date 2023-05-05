@@ -7,6 +7,19 @@ class TestingPlugin extends Plugin
         $this->loadConfig(dirname(__FILE__) . DS . 'config.json');
     }
 
+    public function getActions()
+    {
+        return [
+          [
+              'action' => 'nav_primary_client',
+              'uri' => 'plugin/testing_plugin/client_main/index/',
+              'name' => 'Testing Plugin',
+              'options' => null,
+              'enabled' => 1
+          ]
+        ];
+    }
+
     public function install($plugin_id)
     {
         if (!isset($this->Record)) {
