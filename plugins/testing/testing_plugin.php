@@ -11,7 +11,7 @@ class TestingPlugin extends Plugin
     {
         return [
             [
-                'action' => 'nav_client',
+                'location' => 'nav_client',
                 'uri' => 'plugin/testing/client_main/index/',
                 'name' => 'Testing Plugin',
                 'options' => null,
