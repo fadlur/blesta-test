@@ -1,0 +1,11 @@
+{
+  "version": "1.11.0",
+  "name": "TestingPlugin.name",
+  "description": "TestingPlugin.description",
+  "authors": [
+    {
+      "name": "Fadlur.",
+      "url": "http://blesta.com"
+    }
+  ]
+}
