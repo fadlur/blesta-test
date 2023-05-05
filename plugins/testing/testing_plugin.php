@@ -12,7 +12,7 @@ class TestingPlugin extends Plugin
         return [
             [
                 'action' => 'nav_primary_client',
-                'uri' => 'plugin/testing_plugin/client_main/index/',
+                'uri' => 'plugin/testing/client_main/index/',
                 'name' => 'Testing Plugin',
                 'options' => null,
                 'enabled' => 1
