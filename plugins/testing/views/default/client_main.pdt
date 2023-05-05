@@ -1,0 +1,8 @@
+<?php
+
+$this->WidgetClient->clear();
+$this->WidgetClient->create("Testing Widget Title", ["id" => "testing_widget_id", "class" => "testing_widget_class"], "full");
+
+
+$this->WidgetClient->end();
+?>
