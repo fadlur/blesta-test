@@ -10,13 +10,13 @@ class TestingPlugin extends Plugin
     public function getActions()
     {
         return [
-          [
-              'action' => 'nav_primary_client',
-              'uri' => 'plugin/testing_plugin/client_main/index/',
-              'name' => 'Testing Plugin',
-              'options' => null,
-              'enabled' => 1
-          ]
+            [
+                'action' => 'nav_primary_client',
+                'uri' => 'plugin/testing_plugin/client_main/index/',
+                'name' => 'Testing Plugin',
+                'options' => null,
+                'enabled' => 1
+            ]
         ];
     }
 
@@ -51,5 +51,27 @@ class TestingPlugin extends Plugin
         if ($last_instance) {
             $this->Record->drop('testing_user');
         }
+    }
+
+    public function getCards()
+    {
+        return [
+            [
+                'level' => 'client',
+                'callback' => ['this', 'getListUser'],
+                'callback_type' => 'value',
+                'text_color' => '#ebebeb',
+                'background' => '#343a40',
+                'background_type' => 'color',
+                'label' => 'Testing User',
+                'link' => 'order/orders/',
+                'enabled' => 1
+            ]
+        ];
+    }
+
+    public function getListUser($client_id)
+    {
+        return 10;
     }
 }
