@@ -36,7 +36,7 @@ class TestingPlugin extends Plugin
 
         // Remove all system_overview tables *IFF* no other company in the system is using this plugin
         if ($last_instance) {
-            $this->Record->drop('testing_user');
+//            $this->Record->drop('testing_user');
         }
     }
 }
