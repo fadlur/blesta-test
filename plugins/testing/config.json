@@ -1,7 +1,7 @@
 {
   "version": "1.11.0",
-  "name": "TestingPlugin.name",
-  "description": "TestingPlugin.description",
+  "name": "Testing Plugin",
+  "description": "Testing Plugin description",
   "authors": [
     {
       "name": "Fadlur.",
