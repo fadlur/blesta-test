@@ -11,4 +11,13 @@ class ClientMain extends TestingController {
 
 
     }
+
+    public function settings() {
+
+        $title = "Testing Plugin";
+        $description = "Description";
+
+        $this->set(compact('title', 'description'));
+        return $this->renderAjaxWidgetIfAsync(false);
+    }
 }

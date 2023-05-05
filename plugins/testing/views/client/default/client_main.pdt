@@ -1,6 +1,16 @@
 <?php
 
+$tabs = array(
+        array('name'=>"Settings", 'attributes'=>array('href'=>$this->base_uri . "widget/my_plugin/client_main/settings/")),
+        array('name'=>"Manage", 'current'=>true, 'attributes'=>array('href'=>$this->base_uri . "widget/my_plugin/client_main/manage/"))
+    );
+
 $this->WidgetClient->clear();
+$this->Widget->setTabs($tabs);
+// Allow the widget to be minimized
+$this->Widget->setWidgetButton("arrow");
+// Allow this widget's setting to be updated using ClientMain::settings()
+$this->Widget->setWidgetButton(array('class' => "setting ajax", 'href' => $this->base_uri . "widget/my_plugin/client_main/settings/"));
 $this->WidgetClient->create("Testing Widget Title", ["id" => "testing_widget_id", "class" => "testing_widget_class"], "full");
 
 
