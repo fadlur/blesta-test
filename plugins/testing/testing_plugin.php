@@ -17,6 +17,12 @@ class TestingPlugin extends Plugin
                 'options' => ['parent' => 'services/index/active/']
             ],
             [
+                'location' => 'nav_staff',
+                'uri' => 'plugin/testing/client_main/index/',
+                'name' => 'Testing Plugin',
+                'options' => ['parent' => 'services/index/active/']
+            ],
+            [
                 'action' => 'widget_client_home',
                 'uri' => 'plugin/testing/client_main/widget/',
                 'name' => 'Testing Widget'
