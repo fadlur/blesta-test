@@ -18,7 +18,7 @@ class TestingPlugin extends Plugin
             ],
             [
                 'location' => 'nav_staff',
-                'uri' => 'plugin/testing/client_main/index/',
+                'uri' => 'plugin/testing/staff_main/index/',
                 'name' => 'Testing Plugin',
                 'options' => ['parent' => 'services/index/active/']
             ],
