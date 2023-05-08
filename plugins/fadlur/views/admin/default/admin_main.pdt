@@ -17,6 +17,6 @@ $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "co
 
     </table>
 <?php
-echo (isset($list_client)? count($list_client): "list client empty");
+echo (isset($test_var)? $test_var: "var emplty");
 $this->Widget->end();
 ?>
