@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "Fadlur Test Plugin",
+  "description": "Fadlur Test Plugin description",
+  "authors": [
+    {
+      "name": "Fadlur.",
+      "url": "http://blesta.com"
+    }
+  ]
+}
