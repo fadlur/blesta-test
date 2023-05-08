@@ -6,6 +6,10 @@ class AdminMain extends \FadlurController
 {
     public function index()
     {
-//        return $this->renderAjaxWidgetIfAsync(false);
+        $this->uses(["Clients"]);
+        $list_client = $this->Clients->getList();
+        $this->set(compact('list_client'));
+
+
     }
 }
