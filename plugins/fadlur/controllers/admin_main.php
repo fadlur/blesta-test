@@ -8,8 +8,8 @@ class AdminMain extends \FadlurController
     {
         $this->uses(["Clients"]);
         $list_client = $this->Clients->getList();
-        $this->set(compact('list_client'));
+        $this->set('list_client', $list_client);
 
-
+        $this->view('admin_main');
     }
 }
