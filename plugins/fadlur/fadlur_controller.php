@@ -9,4 +9,9 @@ class FadlurController extends AppController
 
         $this->view->view = "default";
     }
+
+    public function index()
+    {
+
+    }
 }

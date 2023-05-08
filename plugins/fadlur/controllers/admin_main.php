@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-class AdminMainController extends \FadlurController
+class AdminMain extends \FadlurController
 {
     public function index()
     {
