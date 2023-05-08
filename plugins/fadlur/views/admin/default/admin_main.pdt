@@ -14,9 +14,10 @@ $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "co
            <td>Company</td>
            <td>Email</td>
        </tr>
-
-    </table>
 <?php
 echo $test_var;
+?>
+    </table>
+<?php
 $this->Widget->end();
 ?>
