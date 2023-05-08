@@ -17,7 +17,7 @@ class AdminMain extends \FadlurController
         $list_client = [];
         $this->set('list_client', $list_client);
         $this->view->set('list_client', $list_client);
-        $this->render("admin_main");
+        $this->render("admin_main_view");
 //        $this->set('test_var', 'test var');
 //        $this->view->set('test_var', 'variable');
 //        $this->structure->set('test_var', 'variable');
