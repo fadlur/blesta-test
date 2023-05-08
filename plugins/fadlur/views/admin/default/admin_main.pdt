@@ -2,6 +2,8 @@
 echo (isset($message)? $message: null);
 
 $this->Widget->clear();
+// Allow the widget to be minimized
+$this->Widget->setWidgetButton("arrow");
 $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "content_section");
 ?>
     <table class="table">
