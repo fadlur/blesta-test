@@ -16,7 +16,7 @@ class AdminMain extends \FadlurController
         $this->uses(["Clients"]);
         $list_client = [];
         $this->set('list_client', $list_client);
-        $this->set('test_var', 'variable');
+        $this->view->set('test_var', 'variable');
         return $this->renderAjaxWidgetIfAsync(false);
     }
 }
