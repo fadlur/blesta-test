@@ -10,12 +10,13 @@ class AdminMain extends \FadlurController
 
         $this->requireLogin();
     }
+
     public function index()
     {
         $this->uses(["Clients"]);
         $list_client = [];
         $this->set('list_client', $list_client);
 
-        $this->view('admin_main_test');
+        return $this->renderAjaxWidgetIfAsync();
     }
 }
