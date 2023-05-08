@@ -15,6 +15,6 @@ $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "co
 
     </table>
 <?php
-echo count($list_client);
+echo (isset($list_client)? count($list_client): "list client empty");
 $this->Widget->end();
 ?>
