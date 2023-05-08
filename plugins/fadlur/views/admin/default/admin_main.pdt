@@ -17,6 +17,6 @@ $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "co
 
     </table>
 <?php
-echo (isset($test_var)? $test_var: "var emplty");
+echo $test_var;
 $this->Widget->end();
 ?>
