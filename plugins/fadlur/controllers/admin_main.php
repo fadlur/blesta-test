@@ -6,6 +6,6 @@ class AdminMain extends \FadlurController
 {
     public function index()
     {
-        return "main";
+        $this->set('content', $this->partial('admin_main_layout'));
     }
 }
