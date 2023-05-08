@@ -12,8 +12,8 @@ class FadlurPlugin extends \Plugin
     {
         return [
             [
-                'action' => 'nav_staff',
-                'uri' => 'plugin/fadlur/staff_main/index',
+                'action' => 'nav_primary_staff',
+                'uri' => '/plugin/fadlur/admin_main/index',
                 'name' => 'Fadlur',
                 'options' => null,
                 'enabled' => 1
