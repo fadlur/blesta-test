@@ -6,6 +6,6 @@ class AdminMain extends \FadlurController
 {
     public function index()
     {
-        return $this->renderAjaxWidgetIfAsync(false);
+//        return $this->renderAjaxWidgetIfAsync(false);
     }
 }
