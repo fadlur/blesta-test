@@ -4,12 +4,18 @@ namespace controllers;
 
 class AdminMain extends \FadlurController
 {
+    public function preAction()
+    {
+        parent::preAction();
+
+        $this->requireLogin();
+    }
     public function index()
     {
         $this->uses(["Clients"]);
         $list_client = [];
         $this->set('list_client', $list_client);
 
-        $this->view('admin_main');
+        $this->view('admin_main_test');
     }
 }
