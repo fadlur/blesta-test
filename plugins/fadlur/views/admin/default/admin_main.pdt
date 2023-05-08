@@ -3,17 +3,16 @@ echo (isset($message)? $message: null);
 
 $this->Widget->clear();
 $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "content_section");
-
-<table class="table">
-   <tr class="heading_row">
-       <td>Client Id</td>
-       <td>Group</td>
-       <td>Name</td>
-       <td>Company</td>
-       <td>Email</td>
-   </tr>
-
-</table>
-
+?>
+    <table class="table">
+       <tr class="heading_row">
+           <td>Client Id</td>
+           <td>Group</td>
+           <td>Name</td>
+           <td>Company</td>
+           <td>Email</td>
+       </tr>
+    </table>
+<?php
 $this->Widget->end();
 ?>
