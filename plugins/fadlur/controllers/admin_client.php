@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-class AdminClient extends \FadlurController
+class AdminClients extends \FadlurController
 {
     public function preAction()
     {
