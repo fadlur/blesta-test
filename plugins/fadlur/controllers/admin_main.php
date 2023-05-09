@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-class AdminMain extends AppController
+class AdminMain extends \AppController
 {
     public function preAction()
     {
