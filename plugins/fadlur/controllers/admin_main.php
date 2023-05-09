@@ -20,6 +20,6 @@ class AdminMain extends \AppController
         $this->set('list_client', $list_client);
         $this->structure->set('page_title', "Client plugin");
 
-        return $this->renderAjaxWidgetIfAsync(false);
+//        return $this->renderAjaxWidgetIfAsync(false);
     }
 }
