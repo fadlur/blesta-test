@@ -15,8 +15,28 @@ $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "co
            <td>Email</td>
        </tr>
 <?php
-echo isset($list_client)? count($list_client): 'variable not found';
-?>
+            // Display all clients
+            for ($i = 0; $i < count($list_client); $i++) {
+            ?>
+            <tr<?php echo ($i % 2 == 1) ? ' class="odd_row"' : '';?>>
+                <td>
+                <?php echo $list_client[$i]->id;?>
+
+                </td>
+                <td></td>
+                <td>
+                <?php echo isset($list_client[$i]->first_name)? $list_client[$i]->first_name: '';?>
+                </td>
+                <td>
+                <?php echo isset($list_client[$i]->company)? $list_client[$i]->company: '';?>
+                </td>
+                <td>
+                <?php echo isset($list_client[$i]->email)? $list_client[$i]->email: '';?>
+                </td>
+            </tr>
+            <?php
+            }
+            ?>
     </table>
 <?php
 $this->Widget->end();
