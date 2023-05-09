@@ -18,7 +18,7 @@ class AdminMain extends \FadlurController
         $this->uses(["Clients"]);// call model client
 
 
-        $list_client = [];
+        $list_client = $this->Clients->getList();
         $this->set('list_client', $list_client);
 //        $this->structure->set('page_title', "Client plugin");
 
