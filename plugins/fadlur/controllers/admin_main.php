@@ -9,6 +9,8 @@ class AdminMain extends \AppController
         parent::preAction();
 
         $this->requireLogin();
+
+        $this->structure->set('page_title', 'public value');
     }
 
     public function index()
@@ -18,7 +20,7 @@ class AdminMain extends \AppController
 
         $list_client = [];
         $this->set('list_client', $list_client);
-        $this->structure->set('page_title', "Client plugin");
+//        $this->structure->set('page_title', "Client plugin");
 
 //        return $this->renderAjaxWidgetIfAsync(false);
     }
