@@ -1,0 +1,4 @@
+<?php
+echo isset($list_client)? count($list_client): 'kosongan';
+
+?>
