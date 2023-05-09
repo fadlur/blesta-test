@@ -15,7 +15,7 @@ $this->Widget->create("Client List", array("class" => "fadlur_client_list"), "co
            <td>Email</td>
        </tr>
 <?php
-echo isset($list_client)? count($list_client): 'kosong';
+echo isset($list_client)? count($list_client): 'variable not found';
 ?>
     </table>
 <?php
