@@ -161,7 +161,7 @@ class AdminClients extends AppController
         $this->setPagination($this->get, $settings);
 
         // Render the request if ajax
-        return $this->renderAjaxWidgetIfAsync(isset($this->get[1]) || isset($this->get['sort']));
+//        return $this->renderAjaxWidgetIfAsync(isset($this->get[1]) || isset($this->get['sort']));
     }
 
     /**
