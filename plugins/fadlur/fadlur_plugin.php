@@ -13,7 +13,7 @@ class FadlurPlugin extends \Plugin
         return [
             [
                 'action' => 'nav_primary_staff',
-                'uri' => 'plugin/fadlur/admin_main/index',
+                'uri' => 'fadlur_clients/index',
                 'name' => 'Admmmmm',
                 'options' => null,
                 'enabled' => 1
