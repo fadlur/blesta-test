@@ -1,8 +1,8 @@
 <?php
 
-namespace controllers;
+//namespace controllers;
 
-class AdminMain extends \AppController
+class AdminMain extends \FadlurController
 {
     public function preAction()
     {
