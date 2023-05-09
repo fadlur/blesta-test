@@ -18,10 +18,8 @@ class AdminMain extends \FadlurController
 
         $list_client = [];
         $this->set('list_client', $list_client);
-        $this->view->set('list_client', $list_client);
-        $this->structure->set('list_client', 'value');
 
 
-//        return $this->renderAjaxWidgetIfAsync(false);
+        return $this->renderAjaxWidgetIfAsync(false);
     }
 }
