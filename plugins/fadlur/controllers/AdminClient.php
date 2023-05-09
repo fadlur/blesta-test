@@ -11,7 +11,7 @@ class AdminClient extends \FadlurController
         $this->requireLogin();
     }
 
-    public function overview()
+    public function index()
     {
         $this->set('nama', 'fadlur');
     }
