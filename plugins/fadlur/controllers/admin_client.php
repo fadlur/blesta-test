@@ -13,6 +13,11 @@ class AdminClient extends \FadlurController
 
     public function index()
     {
+        
+    }
+
+    public function overview()
+    {
         $this->set('nama', 'fadlur');
     }
 }
