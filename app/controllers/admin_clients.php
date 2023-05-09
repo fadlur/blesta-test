@@ -84,7 +84,7 @@ class AdminClients extends AppController
             $post_filters = $this->post['filters'];
             unset($this->post['filters']);
 
-            foreach($post_filters as $filter => $value) {
+            foreach ($post_filters as $filter => $value) {
                 if (empty($value)) {
                     unset($post_filters[$filter]);
                 }
@@ -138,6 +138,8 @@ class AdminClients extends AppController
         $this->set('order', $order);
         $this->set('negate_order', ($order == 'asc' ? 'desc' : 'asc'));
 
+
+        $this->set('keynya', 'valuenya variable');
         $this->Javascript->setFile('date.min.js');
         $this->Javascript->setFile('jquery.datePicker.min.js');
         $this->Javascript->setInline(
@@ -145,7 +147,7 @@ class AdminClients extends AppController
         );
 
         // Set pagination parameters, set group if available
-        $params = ['sort' => $sort,'order' => $order];
+        $params = ['sort' => $sort, 'order' => $order];
 
         // Overwrite default pagination settings
         $settings = array_merge(
@@ -299,7 +301,7 @@ class AdminClients extends AppController
             $post_filters = $this->post['filters'];
             unset($this->post['filters']);
 
-            foreach($post_filters as $filter => $value) {
+            foreach ($post_filters as $filter => $value) {
                 if (empty($value)) {
                     unset($post_filters[$filter]);
                 }
@@ -322,7 +324,7 @@ class AdminClients extends AppController
                     case 'schedule_cancellation':
                         $term = 'AdminClients.!success.services_scheduled_';
                         $term .= isset($this->post['action_type'])
-                            && $this->post['action_type'] == 'none' ? 'uncancel' : 'cancel';
+                        && $this->post['action_type'] == 'none' ? 'uncancel' : 'cancel';
                         break;
                     case 'invoice_renewal':
                         $term = 'AdminClients.!success.services_renewed';
@@ -408,8 +410,8 @@ class AdminClients extends AppController
         if ($this->isAjax()) {
             return $this->renderAjaxWidgetIfAsync(
                 isset($this->get['whole_widget'])
-                ? null
-                : (isset($this->get[2]) || isset($this->get['sort']))
+                    ? null
+                    : (isset($this->get[2]) || isset($this->get['sort']))
             );
         }
         return $this->renderClientView($this->controller . '_' . $this->action);
@@ -736,7 +738,7 @@ class AdminClients extends AppController
             $post_filters = $this->post['filters'];
             unset($this->post['filters']);
 
-            foreach($post_filters as $filter => $value) {
+            foreach ($post_filters as $filter => $value) {
                 if (empty($value)) {
                     unset($post_filters[$filter]);
                 }
@@ -916,7 +918,7 @@ class AdminClients extends AppController
             $post_filters = $this->post['filters'];
             unset($this->post['filters']);
 
-            foreach($post_filters as $filter => $value) {
+            foreach ($post_filters as $filter => $value) {
                 if (empty($value)) {
                     unset($post_filters[$filter]);
                 }
@@ -968,8 +970,8 @@ class AdminClients extends AppController
         $this->set(
             'widget_state',
             isset($this->widgets_state['transactions'])
-            ? $this->widgets_state['transactions']
-            : null
+                ? $this->widgets_state['transactions']
+                : null
         );
         // Holds the name of all of the transaction types
         $this->set('transaction_types', $this->Transactions->transactionTypeNames());
@@ -1124,7 +1126,7 @@ class AdminClients extends AppController
             $this->StringHelper = $this->DataStructure->create('String');
         }
 
-        $text  = $this->StringHelper->removeFromText($text, $remove_text);
+        $text = $this->StringHelper->removeFromText($text, $remove_text);
         if (empty($text) && !empty($html)) {
             $text = $this->StringHelper->htmlToText($html);
         }
@@ -1586,8 +1588,8 @@ class AdminClients extends AppController
             $user_vars = [
                 'username' => (isset($this->post['settings']['username_type'])
                     && $this->post['settings']['username_type'] == 'email')
-                        ? $this->post['email']
-                        : (isset($this->post['username']) ? $this->post['username'] : ''),
+                    ? $this->post['email']
+                    : (isset($this->post['username']) ? $this->post['username'] : ''),
                 'new_password' => $this->post['new_password'],
                 'confirm_password' => $this->post['new_password']
             ];
@@ -1856,7 +1858,7 @@ class AdminClients extends AppController
 
         if (!isset($this->get['group_id'])
             || ($custom_fields = $this->Clients->getCustomFields($this->company_id, (int)$this->get['group_id']))
-                === false) {
+            === false) {
             header($this->server_protocol . ' 401 Unauthorized');
             exit();
         }
@@ -2044,7 +2046,7 @@ class AdminClients extends AppController
                 break;
             // Set whether the client should be automatically suspended for non-payment
             case 'autosuspend':
-            // Set whether the client should be automatically debited when payment is due
+                // Set whether the client should be automatically debited when payment is due
             case 'autodebit':
                 $options = ['true' => 'enable', 'false' => 'disable'];
                 $keys = array_keys($options);
@@ -2061,9 +2063,9 @@ class AdminClients extends AppController
                 $response = [
                     'class_name' => $options[$index],
                     'text' => (
-                        $index == 'true'
-                            ? Language::_('AdminClients.view.setting_enabled', true)
-                            : Language::_('AdminClients.view.setting_disabled', true)
+                    $index == 'true'
+                        ? Language::_('AdminClients.view.setting_enabled', true)
+                        : Language::_('AdminClients.view.setting_disabled', true)
                     )
                 ];
 
@@ -2101,9 +2103,9 @@ class AdminClients extends AppController
                 $response = [
                     'class_name' => $options[$value],
                     'text' => (
-                        $value == 'true'
-                            ? Language::_('AdminClients.view.setting_enabled', true)
-                            : Language::_('AdminClients.view.setting_disabled', true)
+                    $value == 'true'
+                        ? Language::_('AdminClients.view.setting_enabled', true)
+                        : Language::_('AdminClients.view.setting_disabled', true)
                     )
                 ];
                 break;
@@ -2136,9 +2138,9 @@ class AdminClients extends AppController
                 $response = [
                     'class_name' => $options[$index],
                     'text' => (
-                        $index == 'verified'
-                            ? Language::_('AdminClients.view.setting_verified', true)
-                            : Language::_('AdminClients.view.setting_unverified', true)
+                    $index == 'verified'
+                        ? Language::_('AdminClients.view.setting_verified', true)
+                        : Language::_('AdminClients.view.setting_unverified', true)
                     )
                 ];
                 break;
@@ -2306,8 +2308,8 @@ class AdminClients extends AppController
                 && array_key_exists($this->post['contact_id'], (array)$contact_ids)
                 && ($contact = $this->Contacts->get($this->post['contact_id']))
                 && ($user = $this->Users->get(
-                        $contact->contact_type == 'primary' ? $client->user_id : $contact->user_id
-                    )
+                    $contact->contact_type == 'primary' ? $client->user_id : $contact->user_id
+                )
                 )
             ) {
                 // Get the company hostname
@@ -2362,10 +2364,10 @@ class AdminClients extends AppController
 
     /**
      * Retrieves a list of contacts that can login to the system
-     * @see AdminClients::passwordReset
-     *
      * @param stdClass $client An stdClass object representing the client Id
      * @return array An array of key/value pairs where each key is the contact ID and the value is a language definition
+     * @see AdminClients::passwordReset
+     *
      */
     private function getUserContacts(stdClass $client)
     {
@@ -2943,7 +2945,7 @@ class AdminClients extends AppController
             if (isset($this->post['expiration_year']) || isset($this->post['expiration_month'])) {
                 // Concatenate the expiration date to the form 'yyyymm'
                 $this->post['expiration'] = (
-                        isset($this->post['expiration_year']) ? $this->post['expiration_year'] : ''
+                    isset($this->post['expiration_year']) ? $this->post['expiration_year'] : ''
                     ) . (isset($this->post['expiration_month']) ? $this->post['expiration_month'] : '');
             }
 
@@ -3107,7 +3109,7 @@ class AdminClients extends AppController
             if (isset($this->post['expiration_year']) || isset($this->post['expiration_month'])) {
                 // Concatenate the expiration date to the form 'yyyymm'
                 $this->post['expiration'] = (
-                        isset($this->post['expiration_year']) ? $this->post['expiration_year'] : ''
+                    isset($this->post['expiration_year']) ? $this->post['expiration_year'] : ''
                     ) . (isset($this->post['expiration_month']) ? $this->post['expiration_month'] : '');
             }
 
@@ -3253,7 +3255,7 @@ class AdminClients extends AppController
 
         // Ensure a valid account has been given
         if (!isset($this->get[1])
-            || !($account = $this->Accounts->getAch((int) $this->get[1]))
+            || !($account = $this->Accounts->getAch((int)$this->get[1]))
             || ($account->client_id != $client->id)
             || ($account->status != 'unverified')
         ) {
@@ -3286,7 +3288,7 @@ class AdminClients extends AppController
 
             if (($errors = $this->Accounts->errors())) {
                 // Error, reset vars
-                $vars = (object) $this->post;
+                $vars = (object)$this->post;
                 $vars->gateway_id = $account->gateway_id;
                 $this->setMessage('error', $errors);
             } else {
@@ -3299,7 +3301,7 @@ class AdminClients extends AppController
         // Fetch the ach verification form
         $verification_form = $this->Payments->getBuildAchVerificationForm(
             $client->settings['default_currency'],
-            (array) $vars
+            (array)$vars
         );
 
         // Set current account
@@ -3624,7 +3626,7 @@ class AdminClients extends AppController
                                 if (isset($vars->expiration_year) || isset($vars->expiration_month)) {
                                     // Concatenate the expiration date to the form 'yyyymm'
                                     $vars->expiration = (
-                                            isset($vars->expiration_year) ? $vars->expiration_year : ''
+                                        isset($vars->expiration_year) ? $vars->expiration_year : ''
                                         ) . (isset($vars->expiration_month) ? $vars->expiration_month : '');
                                 }
 
@@ -3647,7 +3649,7 @@ class AdminClients extends AppController
                                 if (isset($vars->expiration_year) || isset($vars->expiration_month)) {
                                     // Concatenate the expiration date to the form 'yyyymm'
                                     $vars->expiration = (
-                                            isset($vars->expiration_year) ? $vars->expiration_year : ''
+                                        isset($vars->expiration_year) ? $vars->expiration_year : ''
                                         ) . (isset($vars->expiration_month) ? $vars->expiration_month : '');
                                 }
 
@@ -4522,14 +4524,14 @@ class AdminClients extends AppController
 
     /**
      * Fetches the total credit amount available for the client in the given currency and payment type
-     * @see AdminClients::recordPayment()
-     *
      * @param int $client_id The ID of the client
      * @param stdClass An stdClass object representing variable input, including:
      *
      *  - currency The currency that the credit should be in
      *  - payment_type The payment type. If not a value of "credit", 0 will be returned
      * @return float The total amount of credit available
+     * @see AdminClients::recordPayment()
+     *
      */
     private function getCreditPaymentAmount($client_id, stdClass $vars)
     {
@@ -4546,12 +4548,12 @@ class AdminClients extends AppController
 
     /**
      * AJAX Fetches a partial containing the record payment/credit fields
-     * @see AdminClients::recordPayment()
-     *
      * @param int $client_id The client ID
      * @param string $currency The currency to fetch credits in
      * @param stdClass $vars An stdClass object representing input vars
      * @return string A partial of the fields
+     * @see AdminClients::recordPayment()
+     *
      */
     public function getRecordCreditFields($client_id = null, $currency = null, $vars = null)
     {
@@ -4600,12 +4602,12 @@ class AdminClients extends AppController
 
     /**
      * Sets the contact partial view
-     * @see AdminClients::makePayment(), AdminClients::addAchAccount(), AdminClients::addCcAccount(),
-     *  AdminClients::editAchAccount(), AdminClients::editCcAccount()
-     *
      * @param stdClass $vars The input vars object for use in the view
      * @param stdClass $client The client object whose contacts to use
      * @param bool $edit True if this is an edit, false otherwise
+     * @see AdminClients::makePayment(), AdminClients::addAchAccount(), AdminClients::addCcAccount(),
+     *  AdminClients::editAchAccount(), AdminClients::editCcAccount()
+     *
      */
     private function setContactView(stdClass $vars, stdClass $client, $edit = false)
     {
@@ -4648,12 +4650,12 @@ class AdminClients extends AppController
 
     /**
      * Sets the ACH partial view
-     * @see AdminClients::makePayment(), AdminClients::addAchAccount(), AdminClients::editAchAccount()
-     *
      * @param stdClass $vars The input vars object for use in the view
      * @param stdClass $client The client object whose contacts to use
      * @param bool $edit True if this is an edit, false otherwise
      * @param bool $save_account True to offer an option to save these payment details, false otherwise
+     * @see AdminClients::makePayment(), AdminClients::addAchAccount(), AdminClients::editAchAccount()
+     *
      */
     private function setAchView(stdClass $vars, stdClass $client, $edit = false, $save_account = false)
     {
@@ -4702,12 +4704,12 @@ class AdminClients extends AppController
 
     /**
      * Sets the CC partial view
-     * @see AdminClients::makePayment(), AdminClients::addCcAccount(), AdminClients::editCcAccount()
-     *
      * @param stdClass $vars The input vars object for use in the view
      * @param stdClass $client The client object whose contacts to use
      * @param bool $edit True if this is an edit, false otherwise
      * @param bool $save_account True to offer an option to save these payment details, false otherwise
+     * @see AdminClients::makePayment(), AdminClients::addCcAccount(), AdminClients::editCcAccount()
+     *
      */
     private function setCcView(stdClass $vars, stdClass $client, $edit = false, $save_account = false)
     {
@@ -5166,11 +5168,11 @@ class AdminClients extends AppController
 
     /**
      * Removes empty line items from an invoice so that it can be auto-saved without error, when possible
-     * @see AdminClients::createInvoice(), AdminClients::editInvoice()
-     *
      * @param string $status The status of the invoice. Only 'draft' line items are changed
      * @param array $lines A list of invoice line items
      * @return array A numerically-indexed array of line items given, minus those that have no description
+     * @see AdminClients::createInvoice(), AdminClients::editInvoice()
+     *
      */
     private function removeEmptyLineItems($status, array $lines = [])
     {
@@ -6083,9 +6085,9 @@ class AdminClients extends AppController
                                 : null
                             );
                             $data['override_currency'] = (
-                                !empty($this->post['override_price']) && !empty($this->post['override_currency'])
-                                    ? $this->post['override_currency']
-                                    : null
+                            !empty($this->post['override_price']) && !empty($this->post['override_currency'])
+                                ? $this->post['override_currency']
+                                : null
                             );
 
                             // Cannot change package/term
@@ -6532,7 +6534,7 @@ class AdminClients extends AppController
                         'href' => (!empty($tab['href'])
                             ? $tab['href']
                             : $this->base_uri . 'clients/servicetab/' . $service->client_id . '/'
-                                . $service->id . '/' . $plug->plugin_id . '/' . $action . '/'
+                            . $service->id . '/' . $plug->plugin_id . '/' . $action . '/'
                         ),
                         'class' => 'ajax'
                     ];
@@ -6629,12 +6631,13 @@ class AdminClients extends AppController
      *  - errors An array of errors if the invoice could not be created
      */
     private function makeInvoice(
-        stdClass $client,
+        stdClass           $client,
         PresenterInterface $presenter,
-        $currency,
-        $deliver = true,
-        $service_id = null
-    ) {
+                           $currency,
+                           $deliver = true,
+                           $service_id = null
+    )
+    {
         // Invoice and queue the service change
         $invoice_vars = [
             'client_id' => $client->id,
@@ -6660,11 +6663,11 @@ class AdminClients extends AppController
 
     /**
      * Creates a set of line items from the given presenter
-     * @see AdminClients::makeInvoice
-     *
      * @param PresenterInterface $presenter An instance of the PresenterInterface
      * @param int $service_id The ID of the service the items are for (optional)
      * @return array An array of line items
+     * @see AdminClients::makeInvoice
+     *
      */
     private function makeLineItems(PresenterInterface $presenter, $service_id = null)
     {
@@ -7663,8 +7666,8 @@ class AdminClients extends AppController
 
                     // Get the package for this addon in order to use its name
                     $addons[$i]['name'] = (isset($addon_service['package_group_id'])
-                            && ($addon_package_group = $this->PackageGroups->get($addon_service['package_group_id']))
-                        )
+                        && ($addon_package_group = $this->PackageGroups->get($addon_service['package_group_id']))
+                    )
                         ? $addon_package_group->name
                         : '';
 

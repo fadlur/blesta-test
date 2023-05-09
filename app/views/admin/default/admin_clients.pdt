@@ -27,6 +27,9 @@
 
         if ((isset($clients) ? $clients : false) && ($num_clients = count($clients)) > 0) {
         ?>
+        <div>
+        <?php echo isset($keynya)? $keynya: "variable custom";?>
+        </div>
         <table class="table">
             <tr class="heading_row">
                 <td><span><a href="<?php echo $this->Html->safe($this->base_uri . 'clients/index/' . (isset($status) ? $status : null) . '/?sort=id_code&order=' . ($sort == 'id_code' ? $negate_order : $order));?>" class="ajax<?php echo $this->Html->safe($sort == 'id_code' ? ' ' . $order : '');?>"><?php $this->_('AdminClients.index.heading_client');?></a></span></td>
