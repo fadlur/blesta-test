@@ -14,7 +14,7 @@ class FadlurPlugin extends \Plugin
             [
                 'action' => 'nav_primary_staff',
                 'uri' => 'plugin/fadlur/admin_main/index',
-                'name' => 'Admmmmm',
+                'name' => 'List Clients',
                 'options' => null,
                 'enabled' => 1
             ]
