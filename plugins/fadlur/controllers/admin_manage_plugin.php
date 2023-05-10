@@ -4,7 +4,7 @@ class AdminManagePlugin extends AppController
 {
     public function init()
     {
-        return $this->view->setView(null, 'fadlur.default');
+        $this->view->setView(null, 'fadlur.default');
     }
 
     public function index()
