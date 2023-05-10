@@ -1,0 +1,5 @@
+<?php
+?>
+<a href="<?php echo $this->Html->safe($this->base_uri . "settings/company/plugins/manage/" . $this->Html->_($plugin_id, true) . "/?controller=admin_manage_plugin&action=foo");?>">Click to open test</a>
+<?php
+?>
