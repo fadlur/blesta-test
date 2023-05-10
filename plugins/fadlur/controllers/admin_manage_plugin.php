@@ -13,7 +13,7 @@ class AdminManagePlugin extends AppController
     {
         $this->init();
 
-        return $this->partial('admin_manage_plugin');
+        return $this->partial('admin_manage_pluginss');
     }
 
     public function test()
