@@ -1,10 +1,12 @@
 <?php
 
-class AdminManagePlugin extends FadlurController
+class AdminManagePlugin extends AppController
 {
     public function init()
     {
-        $this->view->setView(null, 'fadlur.default');
+        $this->parent->requireLogin();
+
+        $this->view->setView(null, 'Fadlur.default');
     }
 
     public function index()
