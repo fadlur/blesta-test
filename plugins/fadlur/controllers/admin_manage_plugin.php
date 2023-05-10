@@ -1,6 +1,6 @@
 <?php
 
-class AdminManagePlugin extends AppController
+class AdminManagePlugin extends FadlurController
 {
     public function init()
     {
